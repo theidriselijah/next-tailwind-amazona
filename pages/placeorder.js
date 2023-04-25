@@ -55,7 +55,7 @@ export default function PlaceOrderScreen() {
           cartItems: [],
         })
       )
-      console.log(data)
+
       router.push(`/order/${data._id}`)
     } catch (err) {
       setLoading(false)
@@ -116,6 +116,10 @@ export default function PlaceOrderScreen() {
                             alt={item.name}
                             width={50}
                             height={50}
+                            style={{
+                              maxWidth: '100%',
+                              height: 'auto',
+                            }}
                           ></Image>
                           &nbsp;
                           {item.name}
