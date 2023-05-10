@@ -1,10 +1,10 @@
 import mongoose from 'mongoose'
 
-const { Schema } = mongoose
+const { Schema, SchemaTypes } = mongoose
 
 const orderSchema = new Schema(
   {
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true },
+    user: { type: SchemaTypes.ObjectId, ref: 'User', required: true },
     orderItems: [
       {
         name: { type: String, required: true },
